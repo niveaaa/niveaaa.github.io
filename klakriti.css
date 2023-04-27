@@ -1018,6 +1018,10 @@ input {
   text-align: center;
 }
 
+.logo {
+  border-radius: 50%;
+}
+
 .hover\:bg-gray-200:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
