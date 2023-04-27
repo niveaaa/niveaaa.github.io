@@ -1235,3 +1235,11 @@ input {
     flex-wrap: nowrap;
   }
 }
+
+
+
+
+
+hr {
+  border: 1px solid grey;
+}
