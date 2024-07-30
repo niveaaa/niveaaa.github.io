@@ -48,7 +48,7 @@ function calculateTax() {
     const totalDeductions80C = Math.min(150000, pfContribution + ppfContribution + lifeInsurancePremium + elssContribution + nscContribution + homeLoanPrincipalRepayment);
 
     // Calculate Other Deductions
-    const totalDeductions = totalDeductions80C + healthInsurancePremium + homeLoanInterest + educationLoanInterest + otherDeductions;
+    const totalDeductions = totalDeductions80C + healthInsurancePremium + homeLoanInterest + educationLoanInterest + otherDeductions + 50000;
 
     // Calculate Taxable Income
     const taxableIncome = netSalary - totalDeductions;
@@ -105,6 +105,7 @@ function calculateTax() {
         <p>HRA Exemption: ₹${hraExemption.toFixed(2)}</p>
         <p>LTA Exemption: ₹${ltaExemption.toFixed(2)}</p>
         <p><strong>Deductions Breakdown:</strong></p>
+        <p>Standard Deduction: ₹50000.00</p>
         <p>PF Contribution: ₹${pfContribution.toFixed(2)}</p>
         <p>PPF Contribution: ₹${ppfContribution.toFixed(2)}</p>
         <p>Life Insurance Premium: ₹${lifeInsurancePremium.toFixed(2)}</p>
