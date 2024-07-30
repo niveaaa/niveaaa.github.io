@@ -75,6 +75,10 @@ function calculateTax() {
     const totalTaxPaid = tdsByEmployer + advanceTaxPayments + selfAssessmentTaxPayments;
     const netTaxPayable = incomeTax - totalTaxPaid;
 
+    // Prepare the last line based on netTaxPayable
+    const netTaxPayableText = netTaxPayable > 0 ? `<p><strong>Net Tax Payable:</strong> ₹${netTaxPayable.toFixed(2)}</p>` 
+                                                : `<p><strong>Income Tax Return:</strong> ₹${Math.abs(netTaxPayable).toFixed(2)}</p>`;
+
     // Display the Results
     document.getElementById('result').innerHTML = `
         <h2>Tax Calculation Result</h2>
@@ -84,7 +88,7 @@ function calculateTax() {
         <p><strong>Taxable Income:</strong> ₹${taxableIncome.toFixed(2)}</p>
         <p><strong>Income Tax:</strong> ₹${incomeTax.toFixed(2)}</p>
         <p><strong>Total Tax Paid:</strong> ₹${totalTaxPaid.toFixed(2)}</p>
-        <p><strong>Net Tax Payable:</strong> ₹${netTaxPayable.toFixed(2)}</p>
+        ${netTaxPayableText}
     `;
 
     // Detailed Results
