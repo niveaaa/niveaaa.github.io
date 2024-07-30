@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Tax Calculator</title>
+    <link rel="stylesheet" href="try.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Income Tax Calculator</h1>
+        <form id="taxForm">
+            <!-- Personal Details Section -->
+            <div class="section">
+                <h2>Personal Details</h2>
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" required>
+                </div>
+                <div class="form-group">
+                    <label for="city">City of Residence:</label>
+                    <select id="city" required>
+                        <option value="metro">Metro</option>
+                        <option value="non-metro">Non-Metro</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Gross Salary Details Section -->
+            <div class="section">
+                <h2>Gross Salary Details</h2>
+                <div class="form-group">
+                    <label for="basic_salary">Basic Salary:</label>
+                    <input type="number" id="basic_salary" required>
+                </div>
+                <div class="form-group">
+                    <label for="hra_received">HRA Received:</label>
+                    <input type="number" id="hra_received" required>
+                </div>
+                <div class="form-group">
+                    <label for="lta_received">LTA Received:</label>
+                    <input type="number" id="lta_received" required>
+                </div>
+                <div class="form-group">
+                    <label for="special_allowances">Special Allowances:</label>
+                    <input type="number" id="special_allowances" required>
+                </div>
+                <div class="form-group">
+                    <label for="bonuses">Bonuses:</label>
+                    <input type="number" id="bonuses" required>
+                </div>
+                <div class="form-group">
+                    <label for="other_taxable_components">Other Taxable Components:</label>
+                    <input type="number" id="other_taxable_components" required>
+                </div>
+            </div>
+
+            <!-- Exemptions Section -->
+            <div class="section">
+                <h2>Exemptions</h2>
+                <div class="form-group">
+                    <label for="rent_paid">Rent Paid:</label>
+                    <input type="number" id="rent_paid" required>
+                </div>
+                <div class="form-group">
+                    <label for="leave_travel_expenses">Leave Travel Expenses:</label>
+                    <input type="number" id="leave_travel_expenses" required>
+                </div>
+            </div>
+
+            <!-- Deductions under Section 80C Section -->
+            <div class="section">
+                <h2>Deductions under Section 80C</h2>
+                <div class="form-group">
+                    <label for="pf_contribution">PF Contribution:</label>
+                    <input type="number" id="pf_contribution" required>
+                </div>
+                <div class="form-group">
+                    <label for="ppf_contribution">PPF Contribution:</label>
+                    <input type="number" id="ppf_contribution" required>
+                </div>
+                <div class="form-group">
+                    <label for="life_insurance_premium">Life Insurance Premium:</label>
+                    <input type="number" id="life_insurance_premium" required>
+                </div>
+                <div class="form-group">
+                    <label for="elss_contribution">ELSS Contribution:</label>
+                    <input type="number" id="elss_contribution" required>
+                </div>
+                <div class="form-group">
+                    <label for="nsc_contribution">NSC Contribution:</label>
+                    <input type="number" id="nsc_contribution" required>
+                </div>
+                <div class="form-group">
+                    <label for="home_loan_principal_repayment">Home Loan Principal Repayment:</label>
+                    <input type="number" id="home_loan_principal_repayment" required>
+                </div>
+            </div>
+
+            <!-- Other Deductions Section -->
+            <div class="section">
+                <h2>Other Deductions</h2>
+                <div class="form-group">
+                    <label for="health_insurance_premium">Health Insurance Premium:</label>
+                    <input type="number" id="health_insurance_premium" required>
+                </div>
+                <div class="form-group">
+                    <label for="home_loan_interest">Home Loan Interest:</label>
+                    <input type="number" id="home_loan_interest" required>
+                </div>
+                <div class="form-group">
+                    <label for="education_loan_interest">Education Loan Interest:</label>
+                    <input type="number" id="education_loan_interest" required>
+                </div>
+                <div class="form-group">
+                    <label for="other_deductions">Other Deductions:</label>
+                    <input type="number" id="other_deductions" required>
+                </div>
+            </div>
+
+            <!-- Tax Paid Information Section -->
+            <div class="section">
+                <h2>Tax Paid Information</h2>
+                <div class="form-group">
+                    <label for="tds_by_employer">TDS by Employer:</label>
+                    <input type="number" id="tds_by_employer" required>
+                </div>
+                <div class="form-group">
+                    <label for="advance_tax_payments">Advance Tax Payments:</label>
+                    <input type="number" id="advance_tax_payments" required>
+                </div>
+                <div class="form-group">
+                    <label for="self_assessment_tax_payments">Self-Assessment Tax Payments:</label>
+                    <input type="number" id="self_assessment_tax_payments" required>
+                </div>
+            </div>
+
+            <button type="button" onclick="calculateTax()"><h3>Calculate Tax</h3></button>
+        </form>
+
+        <div id="result" class="result"></div>
+        <button id="moreDetailsButton" style="display:none;" onclick="toggleDetails()">More Details</button>
+        <div id="detailedResult" class="result" style="display:none;"></div>
+    </div>
+    <script src="try.js"></script>
+</body>
+</html>
