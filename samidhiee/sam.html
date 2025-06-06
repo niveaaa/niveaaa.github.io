@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Video</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body bgcolor="black">
+
+<!-- Loading screen -->
+<div id="loader">
+  <h1>🎉 Happy Birthday Samriddhi! 🎂</h1>
+</div>
+
+<!-- Main content -->
+<div class="ok hidden" id="mainContent">
+  <div class="responsive-wrapper">
+    <iframe 
+      allowfullscreen 
+      src="https://streamable.com/e/ht2hkk?nocontrols=1" 
+      style="border: none;">
+    </iframe>
+  </div>
+</div>
+
+<script>
+  // Hide loader after 3 seconds
+  window.addEventListener("load", function () {
+    setTimeout(() => {
+      document.getElementById("loader").classList.add("fade-out");
+      document.getElementById("mainContent").classList.remove("hidden");
+    }, 800);
+  });
+</script>
+
+</body>
+</html>
